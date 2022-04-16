@@ -1,0 +1,31 @@
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    background: rgb(36, 33, 33);
+    padding: 30px;
+}
+.header-container a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding-bottom: 5px;
+}
+.logoBox h2{
+    color: rgb(250, 60, 60);
+}
+.active{
+    border-bottom: 5px solid rgb(250, 60, 60); 
+}
+.aboutBtn{
+    background: rgb(250, 60, 60);
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.aboutBtn:hover{
+    background: rgb(180, 6, 6)
+}

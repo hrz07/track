@@ -1,0 +1,25 @@
+
+
+.bannerBox{
+    background-image: url('../../photos/banner.png');
+    height: 85vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 30px;
+}
+.bannerBox h1{
+    color: white;
+    font-size: 60px;
+}
+.bannerBox span{
+    color: rgb(228, 5, 5);
+    font-size: 75px;
+}
