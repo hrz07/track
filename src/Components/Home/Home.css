@@ -11,9 +11,11 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    position: sticky;
+    z-index: -1;
+    top: 0;
 }
 .bannerBox h1{
     color: white;
@@ -22,4 +24,25 @@
 .bannerBox span{
     color: rgb(228, 5, 5);
     font-size: 75px;
+}
+.whyMe{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    background: white;
+    margin: 40px 0px;
+    padding-top: 40px;
+    justify-items: center;
+}
+.whyMe img{
+    width: 350px;
+}
+.whyMeText{
+    width: 450px;
+}
+.whyMeText p{
+    font-size: 22px;
+    font-style: italic;
+    color: rgb(96, 94, 94);
+    text-align: justify;
 }
