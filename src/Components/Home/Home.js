@@ -1,8 +1,15 @@
 import React from 'react';
 import './Home.css'
 import MapPhoto from '../../photos/mapping.jpg'
+import useTour from '../../Hooks/useTour';
+import Tourcard from '../TourCard/TourCard';
 
 const Home = () => {
+
+
+    const [places, setPlaces] = useTour()
+    console.log(places)
+
     return (
         <div>
             <div className='bannerBox'>
@@ -21,10 +28,15 @@ const Home = () => {
                 </div>
             </div>
             <div className='spotsContainer'>
-                <h3>Top Places I Guide</h3>
+                <marquee behavior="" direction="">
+                    <h1>Favorite Places to Visit
+                    Popular Destinations</h1>
+                </marquee>
+
+                <h3>DESTINATIONS</h3>
                 <div className='spots'>
                     {
-                        
+                        places.map(place=> <Tourcard id={place.id} place={place}></Tourcard> )
                     }
                 </div>
             </div>
