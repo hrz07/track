@@ -73,5 +73,19 @@ marquee{
 
 
 @media screen and (max-width:600px){
-    
+    .bannerBox h1{
+        font-size: 30px;
+    }
+    .whyMe{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .whyMe p{
+        margin-bottom: 30px;
+    }
+    .spots{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
