@@ -75,14 +75,42 @@ marquee{
 @media screen and (max-width:600px){
     .bannerBox h1{
         font-size: 30px;
+        text-align:center
     }
     .whyMe{
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
     }
+    .whyMeText{
+        width: 345px;
+    }
     .whyMe p{
         margin-bottom: 30px;
+    }
+    .spots{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding:0;
+    }
+    .active{
+        border: none;
+    }
+}
+
+@media screen and (max-width:400px ){
+    .bannerBox h1{
+        font-size: 22px;
+    }
+    .whyMe{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .whyMeText{
+        width: 345px;
+    }
+    .whyMeText p{
+        font-size:15px;
     }
     .spots{
         grid-template-columns: 1fr;

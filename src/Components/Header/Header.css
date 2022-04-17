@@ -58,3 +58,10 @@
         margin-bottom: 10px;
      }
 }
+
+@media screen and (max-width:400px){
+    .active{
+        border: none;
+        color: red;
+    }
+}
