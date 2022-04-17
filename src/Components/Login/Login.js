@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase/firebase.init';
 import './Login.css'
 
 const Login = () => {
 
+    const [user1] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -23,7 +24,10 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
+      const [signInWithGoogle, userGoogle, loadingGoole, errorGoogle] = useSignInWithGoogle(auth);
 
+      
+    
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(e.target.value);
@@ -36,6 +40,7 @@ const Login = () => {
             setUserInfo({ ...userInfo, email: "" })
         }
     }
+
 
 
     const handlePasswordChange = (e) => {
@@ -58,7 +63,17 @@ const Login = () => {
         signInWithEmailAndPassword(userInfo.email,userInfo.password)
    }
 
-   
+  
+    
+   const navigate = useNavigate();
+   const location = useLocation();
+   const from = location.state?.from?.pathname || "/";
+
+   useEffect(() => {
+       if (user1) {
+           navigate(from);
+       }
+   }, [user1]);
 
     return (
         <div className='login-Container'>
@@ -81,7 +96,7 @@ const Login = () => {
                     <p>or</p>
                     <div></div>
                 </div>
-                <button>Continue With Google</button>
+                <button onClick={()=>signInWithGoogle()}>Continue With Google</button>
             </div>
         </div>
     );

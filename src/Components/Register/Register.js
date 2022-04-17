@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './Register.css'
 import auth from '../../firebase/firebase.init'
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 
 const Register = () => {
-
+    const [user1] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -69,6 +69,15 @@ const Register = () => {
         createUserWithEmailAndPassword(userInfo.email,userInfo.password)
     }
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+       if (user1) {
+           navigate(from);
+       }
+   }, [user1]);
     
     return (
         <div className='register-Container'>

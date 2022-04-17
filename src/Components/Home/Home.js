@@ -8,7 +8,6 @@ const Home = () => {
 
 
     const [places, setPlaces] = useTour()
-    console.log(places)
 
     return (
         <div>
@@ -37,7 +36,7 @@ const Home = () => {
     
                 <div className='spots'>
                     {
-                        places.map(place=> <Tourcard id={place.id} place={place}></Tourcard> )
+                        places.map(place=> <Tourcard key={place.id} place={place}></Tourcard> )
                     }
                 </div>
             </div>

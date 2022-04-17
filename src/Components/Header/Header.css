@@ -16,6 +16,13 @@
     margin-right: 20px;
     padding-bottom: 5px;
 }
+.header-container button{
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: rgb(35, 34, 34);
+    cursor: pointer;
+}
 .logoBox h2{
     color: rgb(250, 60, 60);
 }

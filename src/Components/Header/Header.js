@@ -1,8 +1,14 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../../firebase/firebase.init';
 import './Header.css'
 
 const Header = () => {
+
+    const [user, loading, error] = useAuthState(auth);
+
     return (
         <div className='header-container'>
             <div className='logoBox'>
@@ -12,7 +18,10 @@ const Header = () => {
                 <NavLink to='/' >HOME</NavLink>
                 <NavLink to='/destinations' >DESTINATIONS</NavLink>
                 <NavLink to='/blog' >BLOG</NavLink>
-                <NavLink to='/login' >LOGIN</NavLink>
+                {
+                    user ? <button onClick={()=> signOut(auth)}>LOGOUT</button> : <NavLink to='/login' >LOGIN</NavLink>
+                }
+                
             </div>
         </div>
     );

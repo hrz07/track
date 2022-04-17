@@ -11,7 +11,7 @@ const Destinations = () => {
             <h1>DESTINATIONS I GUIDE</h1>
             <div className='destinations'>
             {
-                 places.map(place=> <Tourcard id={place.id} place={place}></Tourcard> )
+                 places.map(place=> <Tourcard key={place.id} place={place}></Tourcard> )
             }
             </div>
         </div>
