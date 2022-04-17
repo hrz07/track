@@ -109,7 +109,7 @@ const Login = () => {
                     <p>or</p>
                     <div></div>
                 </div>
-                <button onClick={() => signInWithGoogle()}>Continue With Google</button>
+                <button  onClick={() => signInWithGoogle()}>Continue With Google</button>
             </div>
             <Toaster
                 position="top-right"
