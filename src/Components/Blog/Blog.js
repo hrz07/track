@@ -9,7 +9,7 @@ const Blog = () => {
                 <p>Authentication is a system to verify a person who is this. Authentication system is changeable by user. In the other side, Authorization means what type of data user can data user can access or use. Authorization system is not changeable by user.</p>
             </div>
             <div className='qa-box'>
-                <h2>why you using firebase ?</h2>
+                <h2>Why you using firebase ?</h2>
                 <p>Firebase provide us real-time database system which is provided by google. Firebase is very easy to use and safe. It is useable from all platform. </p>
                 <p>Here some Alternatives of firebase:</p>
                 <li>Parse</li>
