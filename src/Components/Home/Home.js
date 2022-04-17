@@ -21,7 +21,7 @@ const Home = () => {
             <div className='whyMe'>
                 <div className='whyMeText'>
                     <h1>Why Me ?</h1>
-                    <p>`Well! I have more than 6 years tour guiding experience. I know all tourist places and thousand of history of Bangladesh. I'll explain your all during tour time. I'll care you to being safe`</p>
+                    <p>`Well! I have more than 6 years tour guiding experience. I know all tourist places and thousand years of history of Bangladesh. I'll explain your all during tour time. I'll care you to being safe`</p>
                 </div>
                 <div>
                     <img src={MapPhoto}  />
