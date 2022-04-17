@@ -33,7 +33,7 @@ const Home = () => {
                     Popular Destinations</h1>
                 </marquee>
 
-                <h3>DESTINATIONS</h3>
+                <h3>SERVICES</h3>
     
                 <div className='spots'>
                     {
