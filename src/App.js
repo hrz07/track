@@ -9,6 +9,9 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Blog from './Components/Blog/Blog';
 import Privateroute from './Components/PrivateRoute/PrivateRoute';
+import Footer from './Components/Footer/Footer';
+import Aboutme from './Components/AboutMe/AboutMe';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Route path='/destinations' element={<Destinations></Destinations>} ></Route>
         <Route path='/login' element={<Login></Login>} ></Route>
         <Route path='/register' element={<Register></Register>} ></Route>
+        <Route path='/me' element={<Aboutme></Aboutme>} ></Route>
+        <Route path='/checkout' element={<Checkout></Checkout>} ></Route>
         <Route path='/blog' element={
           <Privateroute>
             <Blog/>
@@ -28,6 +33,7 @@ function App() {
         
         <Route path='*' element={<Notfound></Notfound>} ></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

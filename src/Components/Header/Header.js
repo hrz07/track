@@ -18,6 +18,7 @@ const Header = () => {
                 <NavLink to='/' >HOME</NavLink>
                 <NavLink to='/destinations' >DESTINATIONS</NavLink>
                 <NavLink to='/blog' >BLOG</NavLink>
+                <NavLink to='/me' >ABOUT ME</NavLink>
                 {
                     user ? <button onClick={()=> signOut(auth)}>LOGOUT</button> : <NavLink to='/login' >LOGIN</NavLink>
                 }

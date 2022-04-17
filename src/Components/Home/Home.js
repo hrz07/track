@@ -3,6 +3,7 @@ import './Home.css'
 import MapPhoto from '../../photos/mapping.jpg'
 import useTour from '../../Hooks/useTour';
 import Tourcard from '../TourCard/TourCard';
+import { Link, NavLink } from 'react-router-dom';
 
 const Home = () => {
 
@@ -15,7 +16,7 @@ const Home = () => {
                 <h1>
                     Explore Amazing Places With Me
                 </h1>
-                <button className='aboutBtn'>About Me</button>
+                <button className='aboutBtn'  >EXPLORE</button>
             </div>
             <div className='whyMe'>
                 <div className='whyMeText'>

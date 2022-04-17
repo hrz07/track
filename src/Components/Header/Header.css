@@ -30,6 +30,7 @@
     border-bottom: 5px solid rgb(250, 60, 60); 
 }
 .aboutBtn{
+    text-decoration: none;
     background: rgb(250, 60, 60);
     color: white;
     font-size: 20px;
