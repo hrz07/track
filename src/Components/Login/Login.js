@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase/firebase.init';
+import toast, { Toaster } from 'react-hot-toast';
 import './Login.css'
 
 const Login = () => {
@@ -15,19 +16,18 @@ const Login = () => {
         email: "",
         password: "",
     })
-
+   
 
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-      const [signInWithGoogle, userGoogle, loadingGoole, errorGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, userGoogle, loadingGoole, errorGoogle] = useSignInWithGoogle(auth);
 
-      
-    
+
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
         const validEmail = emailRegex.test(e.target.value);
@@ -60,20 +60,32 @@ const Login = () => {
     const submitHandler = (e) => {
         e.preventDefault();
         console.log(user)
-        signInWithEmailAndPassword(userInfo.email,userInfo.password)
-   }
+        signInWithEmailAndPassword(userInfo.email, userInfo.password)
+    }
 
-  
-    
-   const navigate = useNavigate();
-   const location = useLocation();
-   const from = location.state?.from?.pathname || "/";
 
-   useEffect(() => {
-       if (user1) {
-           navigate(from);
-       }
-   }, [user1]);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (user1) {
+            navigate(from);
+        }
+    }, [user1]);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const resetPassword = async () => {
+        if (userInfo.email) {
+            await sendPasswordResetEmail(userInfo.email);
+            toast.success('Sent email');
+        }
+        else {
+            toast.error('please enter your email address');
+        }
+    }
+    console.log(userInfo.email)
 
     return (
         <div className='login-Container'>
@@ -85,19 +97,24 @@ const Login = () => {
                     {errors?.email && <p >{errors.email}</p>}
                     <br />
                     <input type="password" placeholder='Password' onChange={handlePasswordChange} required />
-                    {errors?.password && <p >{errors.password}</p> }
+                    {errors?.password && <p >{errors.password}</p>}
                     <br />
                     <p>new to track ? <NavLink to='/register'>register now</NavLink> </p>
                     <button>Login</button>
                 </form>
-
+                <p>forget password ?</p>
+                <button onClick={resetPassword}>Reset Password</button>
                 <div className='orBox'>
                     <div></div>
                     <p>or</p>
                     <div></div>
                 </div>
-                <button onClick={()=>signInWithGoogle()}>Continue With Google</button>
+                <button onClick={() => signInWithGoogle()}>Continue With Google</button>
             </div>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
         </div>
     );
 }

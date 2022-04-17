@@ -3,7 +3,7 @@ import './Home.css'
 import MapPhoto from '../../photos/mapping.jpg'
 import useTour from '../../Hooks/useTour';
 import Tourcard from '../TourCard/TourCard';
-import { Link, NavLink } from 'react-router-dom';
+
 
 const Home = () => {
 

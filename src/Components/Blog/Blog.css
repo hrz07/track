@@ -1,3 +1,21 @@
 .blogContainer{
-    height: 80vh;
+    height: 120vh;
+    margin-top:10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.qa-box{
+    width: 600px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow:  6px 6px 27px #d4d4d4,
+                -6px -6px 27px #ffffff;
+
+}
+.qa-box p,li{
+    color: rgb(70, 69, 69);
 }
