@@ -34,6 +34,7 @@ const Home = () => {
                 </marquee>
 
                 <h3>DESTINATIONS</h3>
+    
                 <div className='spots'>
                     {
                         places.map(place=> <Tourcard id={place.id} place={place}></Tourcard> )

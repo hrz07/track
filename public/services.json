@@ -3,32 +3,29 @@
       "id": "1",
       "image": "https://i.ibb.co/zSvfQWj/photo-1587302525159-2363f54affd4.jpg",
       "title": "Coxs Bazar",
-      "description": "How We Dream About Our Future",
-      "category": "breakfast",
-      "price": "21"
+      "description": "I will service 2days. In these 2days i will guide you more than 10 beautiful places",
+      "price": "2000"
     },
     {
       "id": "2",
       "image": "https://i.ibb.co/8jVcdRz/cover22-870x555.jpg",
       "title": "Sajek Valley",
-      "description": "How We Dream About Our Future",
-      "category": "breakfast",
-      "price": "21"
+      "description": "I will service 1days. In these 2days i will guide you more than 8 beautiful places",
+      "price": "2000"
     },
     {
       "id": "3",
       "image": "https://i.ibb.co/RTr0xvf/Rangamati-hanging-Bridge-2019-12-24-12-47-02.jpg",
       "title": "Rangamati",
-      "description": "How We Dream About Our Future",
-      "category": "breakfast",
-      "price": "21"
+      "description": "I will service 2days. In these 3days i will guide you more than 15 beautiful places",
+      "price": "3500"
     },
     {
       "id": "4",
       "image": "https://i.ibb.co/7bdMfQq/srimongol1.jpg",
       "title": "Sylhet",
-      "description": "How We Dream About Our Future",
+      "description": "I will service 1days. In these 2days i will guide you more than 5 beautiful places",
       "category": "breakfast",
-      "price": "21"
+      "price": "1500"
     }
   ]

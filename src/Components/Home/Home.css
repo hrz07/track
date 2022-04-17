@@ -21,10 +21,7 @@
     color: white;
     font-size: 60px;
 }
-.bannerBox span{
-    color: rgb(228, 5, 5);
-    font-size: 75px;
-}
+
 .whyMe{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -68,6 +65,8 @@ marquee{
     top: 0;
 }
 .spots{
+    padding: 40px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
 }
