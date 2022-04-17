@@ -41,3 +41,20 @@
 .aboutBtn:hover{
     background: rgb(180, 6, 6);
 }
+
+
+
+
+/* media querry */
+
+
+@media screen and (max-width:600px){
+    .header-container{
+        flex-direction: column;
+        height: 80px;
+        justify-content: center;
+    }
+     .header-container h2{
+        margin-bottom: 10px;
+     }
+}

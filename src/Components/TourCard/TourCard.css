@@ -7,9 +7,13 @@
     border-radius: 5px;
     text-align: justify;
     width: 360px;
-    box-shadow: 5px 7px 24px -11px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 7px 24px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 7px 24px -11px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    border-radius: 5px;
+    border-radius: 7px;
+    border-radius: 7px;
+background: #fcfcfc;
+box-shadow:  5px 5px 24px #dbdbdb,
+             -5px -5px 24px #ffffff;
 }
 .TourCardContainer img{
     width: 360px;
@@ -47,6 +51,7 @@ small{
     text-align: justify;
     margin-bottom: 10px;
     padding: 2px;
+    color: rgb(95, 93, 93);
 }
 .price{
     font-size: 18px;

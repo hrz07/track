@@ -23,14 +23,14 @@ function App() {
         <Route path='/login' element={<Login></Login>} ></Route>
         <Route path='/register' element={<Register></Register>} ></Route>
         <Route path='/me' element={<Aboutme></Aboutme>} ></Route>
-        <Route path='/checkout' element={<Checkout></Checkout>} ></Route>
-        <Route path='/blog' element={
+        <Route path='/checkout' element={
           <Privateroute>
-            <Blog/>
+            <Checkout></Checkout>
           </Privateroute>
         } >
         </Route>
-        
+        <Route path='/blog' element={<Blog />} ></Route>
+
         <Route path='*' element={<Notfound></Notfound>} ></Route>
       </Routes>
       <Footer></Footer>
