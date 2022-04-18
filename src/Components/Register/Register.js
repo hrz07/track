@@ -3,6 +3,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './Register.css'
 import auth from '../../firebase/firebase.init'
 import { useAuthState, useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import regImg from '../../photos/reg.jpg'
 
 
 const Register = () => {
@@ -23,7 +24,7 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -63,10 +64,10 @@ const Register = () => {
         }
     };
 
-   
+
     const formSubmit = (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(userInfo.email,userInfo.password)
+        createUserWithEmailAndPassword(userInfo.email, userInfo.password)
     }
 
     const navigate = useNavigate();
@@ -74,30 +75,37 @@ const Register = () => {
     const from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-       if (user1) {
-           navigate(from);
-       }
-   }, [user1]);
-    
+        if (user1) {
+            navigate(from);
+        }
+    }, [user1]);
+
     return (
         <div className='register-Container'>
-            <div className='form'>
-                <form  onSubmit={formSubmit}>
-                    <h3>Register</h3>
-                   
-                    <input type="email" placeholder='Email' onChange={handleEmailChange} required />
-                    {errors?.email && <p >{errors.email}</p>}
-                    <br />
-                    <input type="password" placeholder='Password' onChange={handlePasswordChange} required />
-                    {errors?.password && <p >{errors.password}</p>}
-                    <br />
-                    <input type="password" placeholder='Confirm Password' onChange={handleConfirmPasswordChange} required />
-                    <br />
-                    <p>already have account ? <NavLink to='/login'>login now</NavLink> </p>
-                    <button>Register</button>
-                </form>
 
+            <div className="container">
+                <div className="regImg">
+                    <img src={regImg} alt="" />
+                </div>
+                <div className='form'>
+                    <form onSubmit={formSubmit}>
+                        <h3 style={{color:'rgba(0, 128, 0, 0.714)'}} className='regTitle'>Register</h3>
+
+                        <input type="email" placeholder='👤  Email' onChange={handleEmailChange} required />
+                        {errors?.email && <p >{errors.email}</p>}
+                        <br />
+                        <input type="password" placeholder='🔒  Password' onChange={handlePasswordChange} required />
+                        {errors?.password && <p >{errors.password}</p>}
+                        <br />
+                        <input type="password" placeholder='🔒  Confirm Password' onChange={handleConfirmPasswordChange} required />
+                        <br />
+                        <p>already have account ? <NavLink to='/login'  className='resgiterText'>login now</NavLink> </p>
+                        <button className='regBtn'>Register</button>
+                    </form>
+
+                </div>
             </div>
+
         </div>
     );
 }
