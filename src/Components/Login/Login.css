@@ -1,21 +1,31 @@
 .login-Container{
+    
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 90vh;
+    background: rgba(184, 216, 192, 0.448);
+}
+.imgAndFormBox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .form{
-    height: 550px;
-    width: 400px;
+    /* height: 550px;
+    width: 400px; */
     display:flex;
     flex-direction: column;
     align-items: center;
     border-radius: 0px;
-    border-radius: 0px;
-    background:whitesmoke;
-    border: 2px solid rgb(250, 60, 60);
+    padding: 10px;
+    background:white;
+    margin-right: 15px;
+    /* border: 2px solid rgb(250, 60, 60); */
 }
 .form h3{
     text-align: center;
@@ -26,28 +36,32 @@
     width: 350px;
     height: 30px;
     padding:5px;
-    border: 1px solid rgba(250, 60, 60, 0.349);
+    border: 1px solid rgba(41, 224, 151, 0.349);
     margin-bottom: 15px;
     font-size: 16px;
 }
-.form button{
+.form .btn{
     display: block;
     margin: 20px auto;
-    background: rgb(250, 60, 60);
+    background: rgba(0, 128, 0, 0.714);
     color: white;
     font-size: 20px;
     border: none;
     padding: 10px 40px;
     cursor: pointer;
     border-radius: 5px;
+    width: 100%;
 }
-.form button:hover{
-    background: rgb(208, 2, 2);
+.form .btn:hover{
+    background: rgba(0, 128, 0, 0.793);
 }
 .form p{
     font-size: 14px;
     margin: 0;
     color: rgb(88, 87, 87);
+}
+.forgetText{
+    display: inline;
 }
 .form a{
     text-decoration: none;
@@ -57,11 +71,51 @@
 }
 .orBox div{
     height: 2px;
-    width: 90px;
-    border-bottom: 1px solid rgba(250, 60, 60, 0.349);
+    width: 160px;
+    border-bottom: 1px solid rgba(0, 128, 0, 0.714);
 }
 .orBox p{
     padding: 5px;
     top:-13px;
     position: relative;
+}
+.forget{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.resetbtn{
+    background: none;
+    border: none;
+    color: rgba(0, 128, 0, 0.913);
+    padding: 5px;
+    cursor: pointer;
+    top:-3px;
+    position:relative;
+}
+.resetbtn:hover{
+color:red;
+}
+.googleBtn{
+    background:white;
+    color: rgba(0, 128, 0, 0.913);
+    padding: 10px 25px;
+    text-align: center;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.loginImgBox img{
+ width: 400px;
+ height: 400px;
+}
+.googleIcon{
+    position: relative;
+    top: 4px;
+}
+.resgiterText{
+    color: rgba(0, 128, 0, 0.913);
 }
